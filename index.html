@@ -1,0 +1,28 @@
+<html>
+<head> 
+<title>Functions</title>
+</head> 
+<body>
+	<center>
+	<label for="num">Enter the numeric input</label>
+	<input type="text" name="num" id="1" height="5" width="30">
+	<br><br>
+	<button onclick="sol()">click me</button>
+	<br><br>
+	</center>
+	<h3 id="res1"></h3>
+	<h3 id="res2"></h3>
+	<script>
+	function sol(){
+		var num=document.getElementById("1").value;
+        var ans=0;
+        while(num!=0){
+                var dig=num%10;
+                ans=ans*10+dig;
+                num=Math.floor(num/10);
+        }
+        document.getElementById("res2").innerHTML="The reverse of given number is "+ans;
+	}
+	</script>
+</body>
+</html>
